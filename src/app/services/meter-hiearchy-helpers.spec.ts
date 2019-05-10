@@ -90,6 +90,48 @@ describe('MeterHierarchyHelpers', () => {
 
       expect(helpers.getHierarchyWithoutMeter(hierarchy, 11)).toEqual(expectedHierarchy);
     });
+
+    it('should remove submeter only', () => {
+      const expectedHierarchy: Meter[] = [
+        {
+          id: 5,
+          facilityId: 4,
+          name: 'mittari 5',
+          subMeters: [
+            { id: 13, name: 'Meter 13', facilityId: 4 }
+          ]
+        },
+        {
+          id: 9,
+          facilityId: 101,
+          name: 'm 8'
+        },
+        {
+          id: 11,
+          facilityId: 88,
+          name: 'meter11',
+          subMeters: [
+            {
+              id: 33,
+              name: 'M33',
+              facilityId: 88,
+              subMeters: [
+                { id: 45, name: 'meter45', facilityId: 88 },
+                { id: 46, name: 'meter46', facilityId: 88 },
+                { id: 48, name: 'meter48', facilityId: 88 }
+              ]
+            }
+          ]
+        },
+        {
+          id: 55,
+          name: 'Mittari 55',
+          facilityId: 400
+        }
+      ];
+
+      expect(helpers.getHierarchyWithoutMeter(hierarchy, 12)).toEqual(expectedHierarchy);
+    });
   });
 
   afterEach(() => {
