@@ -89,7 +89,6 @@ describe('MeterHierarchyHelpers', () => {
       ];
 
       expect(helpers.getHierarchyWithoutMeter(hierarchy, 11)).toEqual(expectedHierarchy);
-      console.log(hierarchy);
     });
   });
 
