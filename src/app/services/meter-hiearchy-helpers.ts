@@ -3,7 +3,7 @@ import { Meter } from '../meter';
 /**
  * Find meter with given id from hierarchy
  *
- * @returns meter object or null if meter with given id is not not found
+ * @returns meter object or null if meter with given id is not found
  */
 export function findMeterWithId(hierarchy: Meter[], id: number): Meter | null {
   throw Error('Implement this');
