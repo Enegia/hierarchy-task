@@ -1,16 +1,18 @@
 import { Meter } from '../meter';
 
-/*
-  Find meter with given id from hierarchy
-
-  @return found meter or null if not found
-*/
+/**
+ * Find meter with given id from hierarchy
+ *
+ * @returns meter object or null if meter with given id is not not found
+ */
 export function findMeterWithId(hierarchy: Meter[], id: number): Meter | null {
   throw Error('Implement this');
 }
 
-/*
-  Return new hierarchy with meter with given id (and possible submeters) deleted
+/**
+ * Get new hierarchy from which meter with given id (and possible submeters) is deleted
+ *
+ * @returns hierarchy without meter with given id
  */
 export function getHierarchyWithoutMeter(hierarchy: Meter[], id: number): Meter[] {
   throw Error('Implement this');
